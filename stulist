@@ -1,0 +1,15 @@
+#!/usr/local/gnu/bin/bash -f
+
+echo "usage... \$[student grade] [from] [to]"
+
+read s from to
+ 
+echo "######student plan file s1${s}0${from} to s1${s}0${to}"
+
+while [ $from -le $to ]
+do
+    echo ""
+    echo "##########s1${s}0${from}##########"
+    finger s1$s\0$from
+    from=`expr $from + 1`
+done
